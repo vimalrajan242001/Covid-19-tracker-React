@@ -1,0 +1,11 @@
+.chart{
+    width: 85% !important;
+    text-align: center !important;
+    margin-left: 8%;
+    color: blanchedalmond !important;
+}
+@media only screen and (max-width: 600px) {
+    .chart {
+       width: 100%;
+    }
+}

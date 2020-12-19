@@ -12,23 +12,27 @@ class App extends Component {
   
 state={
   data:{},
+  country:''
 }
   async componentDidMount (){
       const fetchedData = await fetchdata();
       this.setState({data:fetchedData})
     }
-
+handleCountryChange=async (country)=> {
+  const fetchedData = await fetchdata(country)
+      this.setState({data:fetchedData,country:country })
+  
+}
   render() {
-    const {data} = this.state;
+    const {data,country} = this.state;
     return (
       <div >
         <ThemeProvider theme={theme}>  
         <Paper className={Style.paper} style={{height:'100%'}}>
       <Navbar />
-      <h1>App </h1>
       <Cards data={data}/>
-      <Chart/>
-      <CountryPicker/>
+      <CountryPicker handleCountryChange={this.handleCountryChange}/>
+      <Chart data={data} country={country} />
       </Paper>
    </ThemeProvider>
    </div>
