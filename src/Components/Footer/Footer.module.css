@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
+.footer{
+      font-family: 'Andika New Basic',
+      sans-serif !important;
+    margin-top: 40px !important;
+    margin-right: 10px !important;
+    font-size: 16px;
+    justify-content: center;
+    text-align: right !important;
+}
+.credits{
+    
+}
+a{
+    color: tomato !important;
+    text-decoration: none !important;
+}
+.name{
+    font-size: 18px;
+    font-family: 'Playball',
+    cursive !important;
+}

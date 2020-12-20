@@ -59,7 +59,7 @@ function Chart({data:{confirmed,deaths,recovered},country}) {
       }}
     />
   ) : null;
-  console.log(confirmed,recovered,deaths);
+  // console.log(confirmed,recovered,deaths);
   const barCart = confirmed ? (
     <Bar
       data={{
@@ -77,7 +77,12 @@ function Chart({data:{confirmed,deaths,recovered},country}) {
         ],
       }}
       options={{
-        legend: { display: false },
+        legend: {
+          display: false,
+          labels: {
+            fontColor: "white",
+          },
+        },
         title: { display: true, text: `Current state in ${country}` },
         scales: {
           yAxes: [
